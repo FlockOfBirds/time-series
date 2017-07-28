@@ -17,3 +17,10 @@ after_success:
 cache:
   directories:
     - "node_modules"
+
+# whitelist
+branches:
+  only:
+    - master
+    - fix/WebmodelerResize
+    - development
