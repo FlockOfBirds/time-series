@@ -39,13 +39,13 @@ class NVD3LineChart extends Component<Nvd3LineChartProps, {}> {
 
     render() {
         const style: {paddingBottom?: string; width: string, height?: string} = {
-            width: this.props.widthUnit === "percentage" ? `${this.props.width}%` : `${this.props.width}`
+            width: this.props.widthUnit === "percentage" ? `${this.props.width}%` : `${this.props.width}px`
         };
 
         if (this.props.heightUnit === "percentageOfWidth") {
             style.paddingBottom = `${this.props.height}%`;
         } else if (this.props.heightUnit === "pixels") {
-            style.paddingBottom = `${this.props.height}`;
+            style.paddingBottom = `${this.props.height}px`;
         } else if (this.props.heightUnit === "percentageOfParent") {
             style.height = `${this.props.height}%`;
         }

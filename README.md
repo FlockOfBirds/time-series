@@ -16,7 +16,7 @@ Plot and track your data across different time periods on a chart.
 * Filling of series area
 
 ## Dependencies
-* Mendix 7.2
+* Mendix 7.6
 
 ## Demo project
 https://timeseriestest.mxapps.io/
