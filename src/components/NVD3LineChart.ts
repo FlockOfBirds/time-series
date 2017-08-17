@@ -1,7 +1,6 @@
 import { select, time } from "d3";
 import { LineChart, Nvd3ResizeHandler, addGraph, models, utils } from "nvd3";
 import { Component, createElement } from "react";
-import { findDOMNode } from "react-dom";
 
 import { Series } from "./TimeSeries";
 import { HeightUnit, WidthUnit } from "../TimeSeries";
@@ -58,7 +57,7 @@ class NVD3LineChart extends Component<Nvd3LineChartProps, {}> {
     componentDidMount() {
         // Add height and display styles to react wrapper
         // Avoided use of clientHeight because content-area varies depending on styling.
-        const reactWrapper = findDOMNode(this).parentElement as HTMLElement;
+        const reactWrapper = this.svg && this.svg.parentElement && this.svg.parentElement.parentElement;
 
         if (this.props.heightUnit === "percentageOfParent" && reactWrapper) {
             reactWrapper.style.height = "100%";
